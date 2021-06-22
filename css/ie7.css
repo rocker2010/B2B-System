@@ -1,0 +1,112 @@
+.logo b {}
+
+.btn {
+	*padding-top: 4px;
+	*margin-right: 4px;
+	*line-height: 1;
+	display: inline-block;
+}
+
+.btn_sm {
+	height: 25px;
+}
+
+.topMenu {
+	*height: 25px;
+}
+
+.buttonContent .line {
+	*padding: 0;
+}
+
+i.fa {
+	*margin-right: 2px;
+}
+
+.widget-tooltips .form-in {
+	*width: 435px;
+	*float: left;
+}
+
+.prosahover {
+	border-left-width: 4px;
+	border-color: #49c7f7;
+	border-style: solid;
+	border-bottom: none;
+	border-top: none;
+	border-right: none;
+}
+
+.topMenu span {
+	*display: inline;
+	*float: left;
+}
+
+.all-nav-items {
+	*float: right;
+	*margin-right: 15px;
+}
+
+.nav-toggle {
+	width: 24px;
+	height: 24px;
+	display: inline-block\9;
+	*display: inline;
+	vertical-align: middle;
+	margin-right: 0px\9;
+	*margin-right: 5px;
+	background: url(img/menu.gif) no-repeat center center;
+}
+
+.all-nav:hover .nav-toggle {
+	background: url(img/menu_close.gif) no-repeat center center;
+}
+
+.nav-toggle span {
+	display: none;
+}
+
+.table-responsive {
+	*overflow-y: hidden;
+}
+
+.mainSubmenu ul li a {
+	*display: block;
+	*overflow: hidden;
+}
+
+.mainSubmenu ul li>a i {
+	*vertical-align: middle;
+	*float: none;
+}
+
+input,
+select {
+	border-color: #aaaaaa;
+	border-style: solid;
+	border-width: 1px;
+}
+
+select {
+	padding-right: 0;
+}
+
+.pageLoad {
+	background: transparent;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7fffffff, endColorstr=#7fffffff);
+	zoom: 1;
+	z-index: 999999;
+}
+
+.file {
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.Report table {
+	width: auto;
+	width: auto!important;
+	height: auto!important;;
+}
+.prosmore h3{
+	*height: 12px;
+}

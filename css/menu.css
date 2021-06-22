@@ -1,0 +1,47 @@
+.Menucss {
+	font-weight: bold;
+	background-color: #f5f5f5;
+	font-weight: bold;
+	height: 30px;
+	margin-bottom: 10px;
+}
+
+.staticMenu {
+	background-color: #f5f5f5;
+	font-family: Arial;
+	display: block;
+	font-size: 17px;
+	color: black;
+}
+
+.staticMenu:hover {
+	font-weight: bold;
+	background-color: #2283d4;
+	color: white;
+}
+
+.staticMenuItem {
+    text-align: center;
+    background-color: #f5f5f5;
+    font-family: Arial;
+    font-size: 16px!important;
+    color: black;
+    padding: 7px 10px;
+    margin: 0px;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.staticMenuItem:hover {
+	font-weight: bold;
+	background-color: #2283d4;
+	color: white;
+	height: 30px;
+}
+
+.staticselected {
+	background-color: #2283d4;
+	font-weight: bold;
+	color: #ffffff;
+	height: 30px;
+}

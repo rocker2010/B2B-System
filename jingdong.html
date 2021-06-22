@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">	
+        <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<title></title>
+		<style>
+			.container{
+				border:1px solid #DDDDDD;
+			}
+			.row-content{
+				padding: 3rem;
+				border-bottom: 1px solid #ddd;
+				
+			}
+			.row-content div:first-child{
+				border-right: 1px solid #ddd;
+				text-align: center;
+			}
+			.content{
+				    margin-top: 2rem;
+    				padding: 2rem 3rem;
+			}
+			.content>ul{
+				background-color: lightgoldenrodyellow;
+				margin-bottom: 2rem;
+				font-size: 12px;
+			}
+			.content>ul>li:first-child>div{
+				display: inline-block;
+			}
+			.font-color{
+				color: #ce3939;
+			}
+			.btn-style{
+				    padding: 2px 4px;
+    				border-radius: 0;
+    				background: #eefbee;
+    				border: 1px solid #9ad29a;
+			}
+			.progress{
+				margin-bottom: -3px;
+			}
+			.font-color-green{
+				color: #568826;
+			}
+			.font-color-red{
+				color: red;
+			}
+			.i-color-green{
+				color: #5cb85c;
+			}
+			.i-color-yellow{
+				color: #bbbb27;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container content">
+			<p>安全中心</p>
+			<ul class="list-inline">
+				<li class="col-xs-8"> 
+					<div>安全级别：</div>
+					<div class="progress" style="width: 50%;">
+					  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+					    <span class="sr-only">40% Complete (success)</span>
+					  </div>
+					</div>
+					<div> <span class="font-color-green">较高</span> <span class="font-color-red">建议您启用全部安全设置，以保障资金安全。</span></div>
+				</li>
+				<li class="col-xs-4 text-right"><a href="">查看历史登录记录</a></li>
+			</ul>
+			
+			<div class="row-content">
+				<div class="col-xs-3">
+					<i class="fa fa-check fa-2x i-color-green"></i>
+					登录密码</div>
+				<div class="col-xs-6 font-color">互联网账号存在被盗风险，建议您定期更改密码以保护账号安全。</div>
+				<div class="col-xs-3"> <a href="">修改</a> </div>
+			</div>
+			<div class="row-content">
+				<div class="col-xs-3">
+					<i class="fa fa-warning fa-2x i-color-yellow"></i>邮箱验证</div>
+				<div class="col-xs-6">验证后，可用于快速找回登录密码，接收账号余额提醒。</div>
+				<div class="col-xs-3"> <a class="btn btn-default btn-sm btn-style">立即验证</a> </div>
+			</div>
+			<div class="row-content">
+				
+				<div class="col-xs-3"> <i class="fa fa-check fa-2x i-color-green"></i>手机验证</div>
+				<div class="col-xs-6">您验证的手机：xxxxx，若以丢失或停用，请立即更换，<span class="font-color">避免账户被盗</span></div>
+				<div class="col-xs-3"> <a href="">修改</a> </div>
+			</div>
+			<div class="row-content">
+				<div class="col-xs-3"> <i class="fa fa-check fa-2x i-color-green"></i>支付密码</div>
+				<div class="col-xs-6">互联网账号存在被盗风险，建议您定期更改密码以保护账号安全。</div>
+				<div class="col-xs-3"> <a href="">修改</a> </div>
+			</div>
+			<div class="row-content">
+				<div class="col-xs-3"><i class="fa fa-check fa-2x i-color-green"></i>实名认证</div>
+				<div class="col-xs-6">互联网账号存在被盗风险，建议您定期更改密码以保护账号安全。</div>
+				<div class="col-xs-3"> <a href="">查看</a> </div>
+			</div>
+			<div class="row-content">
+				<div class="col-xs-3">数字证书</div>
+				<div class="col-xs-6">互联网账号存在被盗风险，建议您定期更改密码以保护账号安全。</div>
+				<div class="col-xs-3"> <a class="btn btn-default btn-sm btn-style">立即启用</a> </div>
+			</div>
+			
+		</div>
+	</body>
+</html>

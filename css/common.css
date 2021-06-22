@@ -1,0 +1,780 @@
+/*
+------------------------------------------------
+site:	TIS for PC
+Author:    liuwanzhi
+updated:   1/5/2018
+update by: liuwanzhi
+------------------------------------------------
+------------------------------------------------
+COLORS
+body background:#fff
+container background:	#fff
+main text:#666666,Helvetica,Arial,Verdana,sans-serif;
+links:#0099FF
+title:#005495
+input button:#ABD8F8
+input border:#ABD8F8
+input text background:#EAF4FD
+------------------------------------------------
+*/
+@font-face{
+	font-family:"DIN_medium";
+	font-style:normal;
+	font-weight:normal;
+	src:url(fonts/DIN_Medium.ttf);
+	
+	}
+body,
+html {
+	color: #555;
+	overflow-x: hidden;
+	font-size: 13px;
+	background: #f5f5f5;
+}
+
+
+/*去掉Iphone的按钮默认样式*/
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+	-webkit-appearance: none;
+}
+
+input,
+textarea,
+select {
+	font-size: 1em;
+	font-size: 100%;
+	font-family: arial;
+	font-family: inherit;
+}
+
+input[type="text"] {}
+
+
+
+textarea {
+	-webkit-appearance: none;
+}
+
+figure,
+form,
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0
+}
+fieldset{
+	padding: 10px;
+	border-left: none;
+	border-right: none;
+	background: #eef9ff;
+	border-top: 2px #E0DFDF solid;
+	border-bottom: 1px #ddd solid;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+form {
+	margin: 0;
+}
+
+a:link,
+a:visited,
+a:hover {
+	-webkit-transition: all .25s linear 0.05s;
+	-moz-transition: all .25s linear 0.05s;
+	-o-transition: all .25s linear 0.05s;
+	transition: all .25s linear 0.05s;
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3 {}
+
+h4,
+h5,
+h6 {
+	font-size: 1em;
+}
+hr{
+	color: #999999;
+}
+ul,
+ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+dl {
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+dt {
+	margin-bottom: 5px;
+}
+
+dd {
+	line-height: 20px;
+	font-size: 12px;
+}
+
+
+/*image with no-border*/
+
+a img {
+	border: 0;
+}
+
+img {
+	border: 0;
+}
+
+input.radius {
+	padding-left: .6em;
+	padding-right: .6em;
+}
+
+input,
+select,
+textarea,
+h4,
+h5 {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+textarea {
+    line-height: 24px;
+}
+
+a {
+	color: #0099FF;
+	text-decoration: none;
+}
+
+a:active,a:hover {
+	color: #085C94;
+}
+
+i {
+	font-style: normal;
+}
+legend{padding: 0 10px;font-size: 16px;font-weight: bold;color: #9E9E9E;}
+p>a {
+	color: #55acef;
+}
+
+.fr {
+	font-family: Arial;
+}
+
+.m5 {
+	margin-left: 5px;
+}
+
+.mt0 {
+	margin-top: 0px!important;
+}
+
+.mt5 {
+	margin-top: 5px!important;
+}
+
+.mb5 {
+	margin-bottom: 5px;
+}
+
+.mb4 {
+	margin-bottom: 4px;
+}
+
+.mb2 {
+	margin-bottom: 2px;
+}
+
+.ml5 {
+	margin-left: 5px!important;
+}
+.mr0 {
+	margin-right: 0px;
+}
+.mr5 {
+	margin-right: 5px;
+}
+
+.mr10 {
+	margin-right: 10px;
+}
+
+.mt15 {
+	margin-top: 15px!important;
+}
+
+.mt20 {
+	margin-top: 20px!important;
+}
+
+.mt46 {
+	margin-top: 46px!important;
+}
+
+.mLR5 {
+	margin: 0 5px
+}
+
+.ml10 {
+	margin-left: 10px
+}
+
+.mb10 {
+	margin-bottom: 10px!important;
+}
+
+.mb20 {
+	margin-bottom: 20px!important;
+}
+
+.mt10 {
+	margin-top: 10px!important;
+}
+
+.m10a {
+	margin: 10px auto;
+}
+
+.ma {
+	margin: 0 auto;
+}
+
+.p4 {
+	padding: 4px!important;
+}
+
+.p5 {
+	padding: 5px!important;
+}
+
+.pl0 {
+	padding-left: 0px!important;
+}
+
+.p10 {
+	padding: 10px;
+}
+
+.p15 {
+	padding: 15px;
+}
+
+.pt50 {
+	padding-top: 50px;
+}
+
+.pt5 {
+	padding-top: 5px;
+}
+
+.pt0 {
+	padding-top: 0px!important;
+}
+
+.pt10 {
+	padding-top: 10px!important;
+}
+
+.pb5 {
+	padding-bottom: 5px;
+}
+
+.pb30 {
+	padding-bottom: 30px!important;
+}
+
+.pb10 {
+	padding-bottom: 10px!important;
+}
+
+.pl0 {
+	padding-left: 0px!important;
+}
+
+.pl5 {
+	padding-left: 5px;
+}
+
+.pl10 {
+	padding-left: 10px;
+}
+
+.pr5 {
+	padding-right: 5px;
+}
+
+.pb0 {
+	padding-bottom: 0px!important
+}
+
+.pr10 {
+	padding-right: 10px;
+}
+
+.plr15 {
+	padding: 0 15px;
+}
+
+.f0 {
+	font-size: 0;
+}
+
+.ts2 {
+	text-shadow: 2px 2px 2px #666
+}
+
+.f12 {
+	font-size: 12px!important;
+	;
+}
+
+.f14 {
+	font-size: 14px!important;
+	;
+}
+
+.f16 {
+	font-size: 1em!important;
+}
+
+.f18 {
+	font-size: 1.125em!important;
+}
+
+.f20 {
+	font-size: 20px!important;
+}
+
+.f22 {
+	font-size: 22px!important;
+}
+
+.f24 {
+	font-size: 26px!important;
+}
+
+.f34 {
+	font-size: 2em!important;
+}
+
+.f14 {
+	font-size: 14px!important;
+}
+
+.f16 {
+	font-size: 16px!important;
+}
+
+.f18 {
+	font-size: 18px!important;
+}
+
+.rel {
+	position: relative
+}
+
+.abs {
+	position: absolute
+}
+
+.r20 {
+	right: 20px!important;
+}
+
+.btm0 {
+	bottom: 0!important;
+}
+
+.tdl {
+	text-decoration: line-through
+}
+
+.fl {
+	float: left
+}
+
+.fr {
+	float: right
+}
+
+.fln {
+	float: none!important;
+}
+
+.t0 {
+	top: 0!important;
+}
+
+.tc {
+	text-align: center
+}
+
+.tr {
+	text-align: right
+}
+
+.tj {
+	text-align: justify
+}
+
+.vm {
+	vertical-align: middle
+}
+
+.ti99 {
+	text-indent: -99999px
+}
+
+.ted {
+	text-decoration: underline;
+}
+
+.ovh {
+	overflow: hidden
+}
+
+.b {
+	/*font-weight: bold!important;*/
+}
+
+.nb {
+	font-weight: normal;
+}
+
+.nbd {
+	border: none!important;
+	box-shadow: none!important;
+}
+
+.pct100,
+.pct90,
+.pct80,
+.pct70,
+.pct60,
+.pct50,
+.pct40,
+.pct30,
+.pct20,
+.pct10 {
+	box-sizing: border-box;
+}
+
+.pct20 {
+	width: 20%;
+}
+
+.pct40 {
+	width: 40%;
+}
+
+.pct30 {
+	width: 33.33333%;
+}
+
+.pct36 {
+	width: 36%;
+}
+
+.pct64 {
+	width: 64%;
+}
+
+.pct80 {
+	width: 80%;
+}
+
+.pct90 {
+	width: 90%;
+}
+
+.pct100 {
+	width: 100%;
+	display: block;
+	float: none;
+}
+
+.pct60 {
+	width: 60%;
+}
+
+.pct50 {
+	width: 50%;
+}
+
+.pct70 {
+	width: 70%;
+}
+
+.pct14 {
+	width: 14.4444%;
+}
+
+.cb {
+	color: #005394;
+}
+
+.lh18 {
+	line-height: 1.125em;
+}
+.lh30 {
+	line-height: 30px;
+}
+.h33 {
+	height: 33px;
+}
+
+.disb {
+	display: block!important;
+}
+
+.disn {
+	display: none!important;
+}
+
+.db {
+	display: block!important;
+}
+
+.blr1 {
+	border-left: 1px #EDEDED solid;
+	border-right: 1px #EDEDED solid;
+}
+
+.br1 {
+	border-right: 1px #EDEDED solid;
+}
+
+
+/* colors */
+
+.cwh {
+	color: white!important;
+}
+
+.cGray {
+	color: #ADADAD
+}
+
+.cb {
+	color: #000;
+}
+
+.cg {
+	color: #999;
+}
+
+.cgr {
+	color: #B6EC8B!important
+}
+
+.cr {
+	color: #E60000!important
+}
+
+.cbl {
+	color: #09F!important
+}
+
+.cy {
+	color: #FF9900!important
+}
+
+.cyl {
+	color: #E9B735!important;
+}
+
+.co {
+	color: #F60!important;
+}
+
+.czj {
+	color: #93C!important;
+}
+
+.wh {
+	color: #fff;
+}
+
+.lh24 {
+	line-height: 24px!important
+}
+
+.bgwh {
+	background: #fff
+}
+
+.bgef {
+	background: #efefef
+}
+
+.bge0 {
+	background: #F5FFE0
+}
+
+.bgrd {
+	background: #F14418;
+	color: #FFF
+}
+
+.bgb {
+	background: #55acef;
+	color: #FFF
+}
+
+.bgg {
+	background: #7bc351
+}
+
+.bgg a {
+	color: #FFF!important;
+}
+
+.bgr {
+	background: #f37872!important;
+}
+
+.bnr {
+	background-repeat: no-repeat!important
+}
+
+
+/* clear */
+
+.cl {
+	clear: both;
+}
+
+.dib {
+	display: block!important
+}
+
+.diib {
+	display: inline-block!important
+}
+
+.inline-box {
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	display: -ms-box;
+}
+
+
+/*inline-block与float等宽列表*/
+
+.inline_box {
+	font-size: 0;
+	/*letter-spacing:-4px;word-spacing: -1px;*/
+	clear: both
+}
+
+.inline_two,
+.inline_three,
+.inline_four,
+.inline_five,
+.inline_six,
+.inline_any {
+	display: inline-block;
+	letter-spacing: normal;
+	word-spacing: normal;
+	vertical-align: top;
+	box-sizing: border-box;
+	/*float:left;*/
+	*display: inline;
+	*zoom: 1;
+}
+
+.float_two,
+.float_three,
+.float_four,
+.float_five,
+.float_six {
+	float: left;
+}
+
+.inline_two,
+.float_two {
+	width: 50%;
+}
+
+.inline_three,
+.float_three {
+	width: 33.3333%;
+}
+
+.inline_four,
+.float_four {
+	width: 25%;
+}
+
+.inline_five,
+.float_five {
+	width: 19%;
+}
+
+.inline_fix {
+	display: inline-block;
+	width: 100%;
+	height: 0;
+	overflow: hidden;
+}
+
+.flex1 {
+	-moz-box-flex: 1.0;
+	/* Firefox */
+	-webkit-box-flex: 1.0;
+	/* Safari 和 Chrome */
+	box-flex: 1.0;
+}
+
+.flex2 {
+	-moz-box-flex: 2;
+	/* Firefox */
+	-webkit-box-flex: 2;
+	/* Safari 和 Chrome */
+	box-flex: 2;
+}
+
+.flex3 {
+	-moz-box-flex: 3.0;
+	/* Firefox */
+	-webkit-box-flex: 3.0;
+	/* Safari 和 Chrome */
+	box-flex: 3.0;
+}
+
+.w123 {
+	width: 9em;
+	max-width: 9em;
+}
+
+.w150 {
+	width: 10em;
+	max-width: 10em;
+}
+
+.animation {
+	-webkit-transition: all .25s linear;
+	-moz-transition: all .25s linear;
+	-o-transition: all .25s linear;
+	transition: all .25s linear;
+}

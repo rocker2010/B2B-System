@@ -1,0 +1,340 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>天狮集团单点登录系统</title>
+        <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+			}
+			
+			body {
+				background-color: #fff;
+				margin: 0px;
+				/*overflow: hidden;*/
+				font-family: arial;
+			}
+			
+			.indexBac {
+				background: url(img/login_bac.jpg) no-repeat top center;
+				height: 416px;
+				position: relative;
+			}
+			
+			.indexLogin {
+				padding: 50px 0;
+				text-align: center;
+			}
+			
+			.indexLogin img {
+				height: 30px;
+			}
+			
+			.indexLogin input,
+			.indexLogin select {
+				font-size: 16px;
+				padding: 6px;
+				margin-right: 10px;
+				border: 1px #ccc solid;
+				padding-right: 14px;
+                height:18px;
+                line-height:18px;
+                display: inline-block; 
+			}
+			
+			.indexLogin select {
+				height: 32px;
+				appearance: none;
+				-moz-appearance: none;
+				-webkit-appearance: none;
+				background: url("css/img/arrow.png") no-repeat scroll right center #fff;
+				padding-left: 6px;
+    			vertical-align: top;
+    			padding: 0\9;
+			}
+			
+			.wby {
+				/*width: 140px;*/
+			}
+			
+			.wby2 {
+				width: 98px;
+				​​​​​​​margin-right: -3px;
+			}
+			
+			footer {
+				font-size: 13px;
+				padding: 0;
+				overflow: hidden;
+				color: #a7a7a7;
+			}
+			
+			.copy a {
+				color: #fff;
+			}
+			
+			.item {
+				float: left;
+				padding-right: 10px;
+				border-right: 1px #dcdcdc solid;
+				margin-right: 10px;
+			}
+			
+			.item:last-child {
+				border-right: none;
+			}
+			
+			p {
+				margin-bottom: 5px;
+			}
+			
+			.copy {
+				background: #000;
+				color: #FFFFFF;
+				text-align: center;
+				padding: 5px 0;
+				font-size: 12px;
+				position: absolute;
+				width: 100%;
+				bottom: 0;
+			}
+			
+			.error {
+				color: orangered;
+				font-size: 14px;
+				margin-bottom: 10px;
+			}
+			
+			.inner {
+				/*width: 900px;*/
+				margin: 0 auto;
+			}
+			
+			.main {
+				position: absolute;
+				width: 100%;
+				top: 50%;
+				margin-top: -330px;
+			}
+			
+			.tab {
+				font-size: 16px;
+				color: #999;
+				position: absolute;
+				top: 120px;
+				left: 130px;
+			}
+			
+			.tab td {
+				padding: 8px;
+			}
+			
+			.tab td input {
+				padding: 7px;
+				border: 1px #ccc solid;
+			}
+			
+			.btn {
+				background: #f3d025;
+				width: 86px;
+				height: 30px;
+				display: inline-block;
+				text-align: center;
+				line-height: 30px;
+				border-radius: 5px;
+				color: #583434;
+				font-size: 14px;
+				box-shadow: 2px 2px 2px #ccc;
+				border: 1px #a08917 solid;
+				cursor: pointer;
+				margin-left: 10px;
+				text-decoration: none;
+			}
+			
+			.indexItem {
+				background: url(img/city.png) no-repeat center center;
+				height: 145px;
+				position: absolute;
+				bottom: -1px;
+				z-index: 2;
+				width: 100%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--<div style="background: dodgerblue;overflow: hidden;height: 450px;"><canvas id="Mycanvas"></canvas></div>-->
+		<div class="indexBac">
+			<div class="indexItem"></div>
+		</div>
+		<div class="indexLogin">
+			<div class="error">错误提示信息！</div>
+			<div class="inner">
+				<sub style="color: orangered;">*</sub><input type="text" id="username" name="username" tabindex="0" class="wby" value="" placeholder="请输入账号名称">
+				<sub style="color: orangered;">*</sub><input type="password" name="password" id="password" class="wby" value="" placeholder="请输入密码">
+				<sub style="color: orangered;">*</sub>
+				<select name="ddl_Language" onchange="javascript:setTimeout('__doPostBack(\'ddl_Language\',\'\')', 0)" id="ddl_Language" class="wby">
+					<option value="en-us">English</option>
+					<option selected="selected" value="zh-cn">中国 - 简体中文</option>
+
+				</select>
+				<sub style="color: orangered;">*</sub><input type="text" name="password" id="password" class="wby2" value="" placeholder="请输入验证码" style="margin-right: 0;">
+				<a href="javascript:void(0);"><span><img id="img_ValidateNumber" src="img/erwei.jpg" alt="验证码" style="vertical-align: middle;margin-top: -1px;"></span></a>
+				<a id="tijiao" name="tijiao" style="cursor:pointer;" class="btn" href="index.html">登录</a>
+			</div>
+			<div class="inner">
+				<sub style="color: orangered;">*</sub>组织机构:
+				<select class="wby">
+					<option selected="selected" value="1">00</option>
+					<option value="20705">26</option>
+					<option value="20706">BD</option>
+					<option value="20781">BD260</option>
+					<option value="20784">BD260000</option>
+					<option value="20785">BD260009</option>
+					<option value="20847">BD260015</option>
+					<option value="20786">BD260017</option>
+					<option value="20848">BD260018</option>
+					<option value="20787">BD260020</option>
+					<option value="20849">BD260021</option>
+					<option value="20788">BD260022</option>
+					<option value="20789">BD260024</option>
+					<option value="20790">BD260025</option>
+					<option value="20850">BD260026</option>
+					<option value="20791">BD260027</option>
+					<option value="20851">BD260028</option>
+					<option value="20792">BD260029</option>
+					<option value="20793">BD260030</option>
+					<option value="20794">BD260031</option>
+					<option value="20839">BD260032</option>
+					<option value="20795">BD260033</option>
+					<option value="20796">BD260035</option>
+					<option value="20797">BD260036</option>
+					<option value="20798">BD260037</option>
+					<option value="20840">BD260038</option>
+					<option value="20799">BD260039</option>
+					<option value="20801">BD260101</option>
+					<option value="20802">BD260102</option>
+					<option value="20841">BD260103</option>
+					<option value="20803">BD260105</option>
+					<option value="20804">BD260106</option>
+					<option value="20805">BD260107</option>
+					<option value="20843">BD260108</option>
+					<option value="20853">BD260112</option>
+					<option value="20855">BD260113</option>
+					<option value="20856">BD260114</option>
+					<option value="20857">BD260115</option>
+					<option value="20859">BD260116</option>
+					<option value="20861">BD260117</option>
+					<option value="20865">BD260118</option>
+					<option value="20867">BD260119</option>
+					<option value="20782">BD261</option>
+					<option value="20811">BD261000</option>
+					<option value="20812">BD261020</option>
+					<option value="20813">BD261043</option>
+					<option value="20845">BD261044</option>
+					<option value="20814">BD261048</option>
+					<option value="20815">BD261052</option>
+					<option value="20816">BD261053</option>
+					<option value="20817">BD261055</option>
+					<option value="20818">BD261056</option>
+					<option value="20819">BD261057</option>
+					<option value="20820">BD261058</option>
+					<option value="20821">BD261059</option>
+					<option value="20822">BD261111</option>
+					<option value="20823">BD261112</option>
+					<option value="20824">BD261113</option>
+					<option value="20825">BD261114</option>
+					<option value="20783">BD262</option>
+					<option value="20826">BD262000</option>
+					<option value="20827">BD262018</option>
+					<option value="20830">BD262031</option>
+					<option value="20831">BD262033</option>
+					<option value="20832">BD262037</option>
+					<option value="20836">BD262201</option>
+					<option value="20837">BD262202</option>
+
+				</select>
+				<a id="tijiao" name="tijiao" style="cursor:pointer;" class="btn" href="index.html">登录</a>
+			</div>
+		</div>
+		<div style="text-align: center">
+			<input type="submit" name="btnLogin" value="登陆" id="btnLogin" class="btn">
+		</div>
+		<div class="copy">
+			Copyright©2015 TIENS Information Center. All rights Reserved.
+		</div>
+        <script type="text/javascript">
+            $(function () {
+                // 如果不支持placeholder，用jQuery来完成
+                if (!isSupportPlaceholder()) {
+                    // 遍历所有input对象, 除了密码框
+                    $('input').not("input[type='password']").each(
+                        function () {
+                            var self = $(this);
+                            var val = self.attr("placeholder");
+                            input(self, val);
+                        }
+                    );
+
+                    /**
+                     *  对password框的特殊处理
+                     * 1.创建一个text框 
+                     * 2.获取焦点和失去焦点的时候切换
+                     */
+                    $('input[type="password"]').each(
+                        function () {
+                            var pwdField = $(this);
+                            var pwdVal = pwdField.attr('placeholder');
+                            var pwdId = pwdField.attr('id');
+                            // 重命名该input的id为原id后跟1
+                            pwdField.after('<input id="' + pwdId + '1" type="text" value=' + pwdVal + ' autocomplete="off" />');
+                            var pwdPlaceholder = $('#' + pwdId + '1');
+                            pwdPlaceholder.show();
+                            pwdField.hide();
+
+                            pwdPlaceholder.focus(function () {
+                                pwdPlaceholder.hide();
+                                pwdField.show();
+                                pwdField.focus();
+                            });
+
+                            pwdField.blur(function () {
+                                if (pwdField.val() == '') {
+                                    pwdPlaceholder.show();
+                                    pwdField.hide();
+                                }
+                            });
+                        }
+                    );
+                }
+            });
+
+            // 判断浏览器是否支持placeholder属性
+            function isSupportPlaceholder() {
+                var input = document.createElement('input');
+                return 'placeholder' in input;
+            }
+
+            // jQuery替换placeholder的处理
+            function input(obj, val) {
+                var $input = obj;
+                var val = val;
+                $input.attr({ value: val });
+                $input.focus(function () {
+                    if ($input.val() == val) {
+                        $(this).attr({ value: "" });
+                    }
+                }).blur(function () {
+                    if ($input.val() == "") {
+                        $(this).attr({ value: val });
+                    }
+                });
+            }
+        </script>
+	</body>
+
+</html>
