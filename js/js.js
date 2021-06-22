@@ -2,7 +2,7 @@
 	$.scrollUp();
 	$('[data-toggle="tooltip"]').tooltip();
 })();
-$(".mainSubmenu ul li .prosmore").prepend("<div class='closeAction'><button class='closeMenu'><img src='/css/img/close.png'></button></div>");
+$(".mainSubmenu ul li .prosmore").prepend("<div class='closeAction'><button class='closeMenu'><img src='css/img/close.png'></button></div>");
 //$('#dropdownWrapper').on('shown.bs.dropdown', function showDropdown() {
 //	$(".content").css("left", $menu.outerWidth());
 //	$(".nav-toggle").addClass("active");
